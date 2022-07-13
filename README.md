@@ -22,16 +22,4 @@
 Логирование docker контейнеров. Знакомство c Elastic Stack, fluentd. Работа с логами через kibana, Трейсинг через zipkin.
 
 ##ДЗ№19
-создаем 2 вм в облаке. на обеих вм выполняем следующие команды
-sudo apt-get update
-sudo apt install docker.io
-sudo apt-get install -y apt-transport-https ca-certificates curl
-sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
-echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-sudo apt-get update
-sudo apt-get install -y kubelet kubeadm kubectl
-sudo apt-mark hold kubelet kubeadm kubectl
-sudo kubeadm init --apiserver-cert-extra-sans=<external-master-ip> --apiserver-advertise-address=0.0.0.0 --control-plane-endpoint=<external-master-ip> --pod-network-cidr=10.244.0.0/16
-
-После установки kubeadm будет пример команд по запуску кластера и добавления воркер ноды. команду по инит выполняем только на одной вм
-на второй вм запускаем уже команду по добавлению воркера
+Развертывание кластера Kubernetes. Подготовка двух виртуальных машин для кластера, одна как master, вторая как worker. Знакомство с kubeadm и kubectl. Подготовка и применение манифестов с Deployment. Установка и применение calico.
