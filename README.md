@@ -28,3 +28,6 @@
 Развертывание локального кластера kubernetes (minikube). Подготовка манифестов для развертывания в кластере kubernetes. Работа с kubectl, minikube.  Знакомство с service, namespace, selector. Запуск кластера kubernetes в Яндекс.Облаке с последующей раскаткой манифестов сервиса, и проверка работоспособности сервиса.
 
 Скриншоты живут в ./kubernetes/screenshots
+
+##ДЗ№21
+Знакомство с ingress контроллером, установка и настройка в облачном кластере. Раскатка сервиса с использованием ingress + tls. Знакомство с NetworkPolicy, PersistentVolume, добавление PersistentVolume к сервису.
